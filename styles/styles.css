@@ -100,6 +100,10 @@ nav ul a.active { color: var(--green); }
 
 /* ──── HERO ──── */
 #home {
+  background-image: url("../images/wide_landing_blurred.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
