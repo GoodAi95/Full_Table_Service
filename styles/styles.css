@@ -934,6 +934,26 @@ footer {
 .social-btn { width: 40px; height: 40px; background: var(--dark3); border: 1px solid rgba(120,133,101,0.2); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; text-decoration: none; transition: border-color .2s, background .2s; }
 .map-placeholder { background: var(--dark2); border: 1px solid rgba(120,133,101,0.2); border-radius: 4px; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .75rem; margin-top: 1.5rem; cursor: pointer; transition: border-color .2s; }
 
+/* ──── SCROLL ANIMATIONS ──── */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  /* Use ease-out for a natural deceleration effect */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform; /* Optimizes browser rendering */
+}
+
+/* Active state: fully visible and in its original position */
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: Add a delay utility class for staggered animations */
+.delay-100 { transition-delay: 100ms !important; }
+.delay-200 { transition-delay: 200ms !important; }
+.delay-300 { transition-delay: 300ms !important; }
+
 /* ──── MOBILE MENU BTN ──── */
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
 .hamburger span { width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
