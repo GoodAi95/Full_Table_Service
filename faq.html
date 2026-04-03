@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | Chef's Table Catering</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+<script>
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/><rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/></svg>
+    <span class="logo-text">Chef's<span>Table</span></span>
+  </a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="menus.html">Menus</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="faq.html" class="active">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="nav-controls">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌓</button>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <p class="page-hero-eyebrow">Got Questions?</p>
+  <h1>We've got<br><em>answers</em> for<br>everything.</h1>
+  <p>Browse our most frequently asked questions below. Can't find what you're looking for? Reach out directly and we'll respond within 24 hours.</p>
+</div>
+
+<div class="section">
+  <div class="faq-search">
+    <input type="text" placeholder="Search questions..." id="faqSearch" oninput="searchFAQ(this.value)">
+  </div>
+  <div class="faq-tabs">
+    <button class="faq-tab active" onclick="filterFAQ('all',this)">All</button>
+    <button class="faq-tab" onclick="filterFAQ('booking',this)">Booking</button>
+    <button class="faq-tab" onclick="filterFAQ('payment',this)">Payment</button>
+    <button class="faq-tab" onclick="filterFAQ('menus',this)">Menus & Food</button>
+    <button class="faq-tab" onclick="filterFAQ('logistics',this)">Logistics</button>
+    <button class="faq-tab" onclick="filterFAQ('events',this)">Events</button>
+  </div>
+
+  <!-- BOOKING -->
+  <div class="faq-category" data-cat="booking">
+    <p class="faq-category-title">Booking</p>
+    <div class="faq-item" data-cat="booking"><div class="faq-q"><span>How far in advance should I book?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>For standard events (private parties, corporate lunches) we recommend booking at least 4–6 weeks in advance. For weddings and large-scale functions, 3–6 months ahead is ideal. Popular dates — especially December, March, and year-end periods — fill up quickly, so the sooner you reach out, the better.</p></div></div>
+    <div class="faq-item" data-cat="booking"><div class="faq-q"><span>How do I make a booking?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Simply fill in our inquiry form on the Contact page with your event details — date, guest count, type of event, and any special requirements. We'll respond within 24 hours with a personalised quote and next steps. No obligation until you sign the contract and pay the deposit.</p></div></div>
+    <div class="faq-item" data-cat="booking"><div class="faq-q"><span>Can I book for the same week or next day?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>In some cases, yes — depending on availability and the scale of your event. We do accommodate last-minute bookings for smaller events when our schedule allows. Contact us as soon as possible and we'll let you know our availability. An emergency booking fee may apply for events booked within 5 days.</p></div></div>
+    <div class="faq-item" data-cat="booking"><div class="faq-q"><span>Do you service outside of Johannesburg?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Yes! While we're based in Johannesburg, we regularly service events across Gauteng and throughout South Africa. Travel and logistics fees apply for events more than 50km from our base in Johannesburg. For out-of-province events, contact us for a customised quote that includes travel and accommodation for our team.</p></div></div>
+  </div>
+
+  <!-- PAYMENT -->
+  <div class="faq-category" data-cat="payment">
+    <p class="faq-category-title">Payment</p>
+    <div class="faq-item" data-cat="payment"><div class="faq-q"><span>What is the deposit structure?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>We require a 30–50% deposit upon signing the service contract to secure your booking and date. The remaining balance is invoiced and due within 7 days after your event has been completed and signed off. For larger events, the split may be negotiated — this will be detailed in your contract.</p></div></div>
+    <div class="faq-item" data-cat="payment"><div class="faq-q"><span>What payment methods do you accept?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>We accept EFT (Electronic Funds Transfer), credit and debit card payments, and select mobile payment platforms. Our preferred method is EFT as it avoids processing fees. All payment details are included on your invoice. We do not accept cash for bookings.</p></div></div>
+    <div class="faq-item" data-cat="payment"><div class="faq-q"><span>What is your cancellation policy?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Cancellations made more than 30 days before the event will receive a full refund of the deposit minus a 10% administration fee. Cancellations between 15–30 days will receive a 50% refund of the deposit. Cancellations within 14 days will forfeit the deposit entirely. All cancellations must be submitted in writing via email. Please refer to your signed service contract for the full policy.</p></div></div>
+    <div class="faq-item" data-cat="payment"><div class="faq-q"><span>Are there any hidden fees?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>No. Our quotes are fully itemised and transparent. Any potential additional costs — such as travel fees, last-minute menu changes, or emergency staffing — are communicated to you upfront before your contract is signed. You will never receive a surprise charge on your final invoice.</p></div></div>
+  </div>
+
+  <!-- MENUS & FOOD -->
+  <div class="faq-category" data-cat="menus">
+    <p class="faq-category-title">Menus & Food</p>
+    <div class="faq-item" data-cat="menus"><div class="faq-q"><span>Can you accommodate dietary restrictions?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Absolutely — dietary accommodation is a core part of our service. We cater for vegan, vegetarian, halal, kosher, gluten-free, nut-free, dairy-free, and other allergen-specific requirements. The number of dietary options included varies by package, but we always ensure every guest is catered for. Please provide a full breakdown of dietary needs when making your inquiry.</p></div></div>
+    <div class="faq-item" data-cat="menus"><div class="faq-q"><span>Can I customise my menu?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Yes — all menus are customisable to varying degrees depending on your package. Our Signature and Prestige packages include consultation sessions where we work with you to build a menu from scratch. Essential package clients can swap dishes within the existing menu. We also offer a full custom menu design service for Prestige bookings, including a private tasting session.</p></div></div>
+    <div class="faq-item" data-cat="menus"><div class="faq-q"><span>Do you offer tasting sessions before the event?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Yes! Our Prestige package includes a complimentary tasting session for up to 4 guests at our kitchen or a venue of your choice. For Signature package clients, tastings can be arranged for an additional fee of R850, which is credited against your final invoice. Essential package clients are welcome to view and taste from our existing sample menu at one of our tasting events (dates published quarterly).</p></div></div>
+    <div class="faq-item" data-cat="menus"><div class="faq-q"><span>Do you use fresh, local ingredients?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Yes — we're committed to seasonal, locally sourced ingredients as much as possible. We work with a network of trusted South African producers and suppliers. Menus are refreshed seasonally to reflect what's fresh and available. Imported specialty ingredients are used where local alternatives don't meet our quality standard.</p></div></div>
+  </div>
+
+  <!-- LOGISTICS -->
+  <div class="faq-category" data-cat="logistics">
+    <p class="faq-category-title">Logistics</p>
+    <div class="faq-item" data-cat="logistics"><div class="faq-q"><span>Do you supply equipment and staff?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Yes — all packages include professional service staff, crockery, cutlery, and serving equipment. Premium packages include upgraded tableware, linen, and a dedicated event coordinator. We bring everything needed to serve your guests professionally, and collect all equipment at the end of the event. You don't need to source anything separately.</p></div></div>
+    <div class="faq-item" data-cat="logistics"><div class="faq-q"><span>When does your team arrive and leave?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Our team typically arrives 2–3 hours before the event start time to set up, prepare, and be ready well before your guests arrive. We stay through the entire event including service and clearing, and typically depart 1–2 hours after the event concludes once all equipment has been packed and the space is clean.</p></div></div>
+    <div class="faq-item" data-cat="logistics"><div class="faq-q"><span>Do you clean up after the event?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Yes — full cleanup is included in all packages. This covers clearing all tables, washing all serving equipment we've brought, packing everything out, removing any food waste, and leaving the kitchen and dining areas clean and tidy. Prestige package includes an additional post-event deep clean option.</p></div></div>
+    <div class="faq-item" data-cat="logistics"><div class="faq-q"><span>Can you work in a venue without a kitchen?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Yes — we have mobile kitchen equipment and can operate in marquees, outdoor spaces, warehouses, and venues without built-in catering facilities. We'll assess your venue during the planning phase and advise on any additional equipment or logistics required. There may be an additional equipment hire fee for off-grid venues.</p></div></div>
+  </div>
+
+  <!-- EVENTS -->
+  <div class="faq-category" data-cat="events">
+    <p class="faq-category-title">Events</p>
+    <div class="faq-item" data-cat="events"><div class="faq-q"><span>What is the maximum number of guests you can serve?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>We regularly cater for events of up to 500 guests. For events exceeding 500 guests, please contact us directly so we can assess staffing, logistics, and equipment requirements. We have partnered with trusted colleagues in the industry to support larger-scale events when necessary.</p></div></div>
+    <div class="faq-item" data-cat="events"><div class="faq-q"><span>Can you handle both food and beverage service?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Yes — we offer full bar and beverage service as an add-on to all packages. This includes a licensed bartender, glassware, a curated cocktail and mocktail menu, and soft drink alternatives. We can also provide wine and champagne service as part of dinner service. Note that we require a licenced venue or temporary liquor licence for events where alcohol is served.</p></div></div>
+    <div class="faq-item" data-cat="events"><div class="faq-q"><span>What happens if my guest count changes?</span><div class="faq-icon">+</div></div><div class="faq-a"><p>Final guest numbers must be confirmed no later than 7 days before the event. We can accommodate increases of up to 15% above your contracted number with reasonable notice, though additional charges will apply. Decreases of up to 10% can be accommodated without penalty if notified 7+ days before the event.</p></div></div>
+  </div>
+
+  <div class="help-card">
+    <div>
+      <h3>Still have questions?</h3>
+      <p>Our team is available Monday to Saturday, 8am–6pm. We typically respond to all inquiries within a few hours during business hours. Don't hesitate to reach out — there's no such thing as a silly question when it comes to your event.</p>
+    </div>
+    <a href="contact.html" class="btn-primary">Contact Us</a>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <h2>Ready to get started?</h2>
+  <p>Submit an inquiry and we'll have a personalised quote back to you within 24 hours.</p>
+  <a href="contact.html" class="btn-primary">Book Your Event</a>
+</div>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:.75rem"><svg width="28" height="28" viewBox="0 0 36 36" fill="none"><path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/><rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/></svg><span class="footer-copy">© 2026 Chef's Table Catering. All rights reserved.</span></div>
+  <div class="footer-links"><a href="index.html">Home</a><a href="menus.html">Menus</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div>
+</footer>
+<script>
+// Theme & Nav Logic
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  });
+}
+const hamburger = document.querySelector('.hamburger');
+const navUl = document.querySelector('nav ul');
+if (hamburger && navUl) { hamburger.addEventListener('click', () => navUl.classList.toggle('active')); }
+
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-icon').textContent = '+'; });
+    if(!open){ item.classList.add('open'); item.querySelector('.faq-icon').textContent = '−'; }
+  });
+});
+function filterFAQ(cat, btn) {
+  document.querySelectorAll('.faq-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.faq-category').forEach(c => c.style.display = (cat==='all'||c.dataset.cat===cat)?'':'none');
+  document.querySelectorAll('.faq-item').forEach(i => i.style.display = '');
+}
+function searchFAQ(val) {
+  const q = val.toLowerCase();
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const text = item.textContent.toLowerCase();
+    item.style.display = (!q || text.includes(q)) ? '' : 'none';
+  });
+  document.querySelectorAll('.faq-category').forEach(c => {
+    const visible = [...c.querySelectorAll('.faq-item')].some(i => i.style.display !== 'none');
+    c.style.display = visible ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

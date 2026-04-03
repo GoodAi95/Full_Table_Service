@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menus | Chef's Table Catering</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+<script>
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/><rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/></svg>
+    <span class="logo-text">Chef's<span>Table</span></span>
+  </a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="menus.html" class="active">Menus</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="nav-controls">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌓</button>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <p class="page-hero-eyebrow">What We Cook</p>
+  <h1>Menus built for<br><em>every palate,</em><br>every occasion.</h1>
+  <p>Seasonally inspired, meticulously crafted, and always adaptable — browse our full menu offering below or request a custom menu consultation.</p>
+</div>
+
+<div class="section">
+  <div class="legend">
+    <span class="legend-title">Dietary Key</span>
+    <div class="legend-items">
+      <span class="legend-item"><span class="tag tag-v">V</span> Vegan</span>
+      <span class="legend-item"><span class="tag tag-gf">GF</span> Gluten-Free</span>
+      <span class="legend-item"><span class="tag tag-h">H</span> Halal</span>
+      <span class="legend-item"><span class="tag tag-chef">Chef's Pick</span> Chef's Pick</span>
+    </div>
+  </div>
+
+  <!-- STARTERS -->
+  <div class="menu-category" id="starters">
+    <div class="menu-category-header">
+      <span class="menu-category-icon">🥗</span>
+      <div><h2>Starters & Canapes</h2><p>Light, elegant, and designed to set the tone for the meal ahead</p></div>
+    </div>
+    <div class="menu-items">
+      <div class="menu-item"><div class="menu-item-header"><h3>Butternut Velouté</h3><span class="menu-item-price">R55 pp</span></div><p>Roasted butternut soup with crème fraîche, toasted pepitas, and a drizzle of chilli oil. Silky, warming, and perfectly balanced.</p><div class="menu-item-tags"><span class="tag tag-v">V</span><span class="tag tag-gf">GF</span></div></div>
+      <div class="menu-item"><div class="menu-item-header"><h3>Beef Carpaccio</h3><span class="menu-item-price">R85 pp</span></div><p>Thinly sliced wagyu beef with rocket, shaved parmesan, capers, and a lemon-truffle dressing. Light, luxurious, and classic.</p><div class="menu-item-tags"><span class="tag tag-gf">GF</span><span class="tag tag-chef">Chef's Pick</span></div></div>
+      <div class="menu-item"><div class="menu-item-header"><h3>Prawn Bruschetta</h3><span class="menu-item-price">R90 pp</span></div><p>Garlic-butter prawns on toasted sourdough with avocado cream, pickled cucumber, and micro herbs. A perennial crowd favourite.</p><div class="menu-item-tags"><span class="tag tag-h">H</span></div></div>
+      <div class="menu-item"><div class="menu-item-header"><h3>Mushroom & Goat's Cheese Tartlet</h3><span class="menu-item-price">R65 pp</span></div><p>Wild mushroom and creamy goat's cheese in a crisp pastry shell, finished with a balsamic reduction and fresh thyme.</p><div class="menu-item-tags"><span class="tag tag-v">V</span><span class="tag tag-chef">Chef's Pick</span></div></div>
+    </div>
+  </div>
+
+  <!-- MAINS -->
+  <div class="menu-category" id="mains" style="background:var(--dark2);padding:3rem;border-radius:4px;margin:-1rem">
+    <div class="menu-category-header">
+      <span class="menu-category-icon">🍽️</span>
+      <div><h2>Main Courses</h2><p>The heart of the table — bold, seasonal, and built around the best local produce</p></div>
+    </div>
+    <div class="menu-items">
+      <div class="menu-item" style="background:var(--dark3)"><div class="menu-item-header"><h3>Slow-Roasted Lamb Shoulder</h3><span class="menu-item-price">R185 pp</span></div><p>8-hour slow-roasted lamb with roasted root vegetables, pomegranate gremolata, and a red wine jus. A showpiece main for any occasion.</p><div class="menu-item-tags"><span class="tag tag-gf">GF</span><span class="tag tag-h">H</span><span class="tag tag-chef">Chef's Pick</span></div></div>
+      <div class="menu-item" style="background:var(--dark3)"><div class="menu-item-header"><h3>Pan-Seared Kingklip</h3><span class="menu-item-price">R165 pp</span></div><p>Crispy-skinned kingklip fillet on white bean purée with spinach, cherry tomatoes, and a lemon-caper butter sauce.</p><div class="menu-item-tags"><span class="tag tag-gf">GF</span><span class="tag tag-chef">Chef's Pick</span></div></div>
+      <div class="menu-item" style="background:var(--dark3)"><div class="menu-item-header"><h3>Chicken Supreme</h3><span class="menu-item-price">R120 pp</span></div><p>Free-range chicken breast stuffed with sundried tomato and feta, served with a pea velouté and seasonal vegetables.</p><div class="menu-item-tags"><span class="tag tag-gf">GF</span><span class="tag tag-h">H</span></div></div>
+      <div class="menu-item" style="background:var(--dark3)"><div class="menu-item-header"><h3>Wild Mushroom Risotto</h3><span class="menu-item-price">R105 pp</span></div><p>Creamy arborio risotto with a blend of porcini, shiitake, and oyster mushrooms, finished with truffle oil and aged parmesan.</p><div class="menu-item-tags"><span class="tag tag-v">V</span><span class="tag tag-gf">GF</span></div></div>
+      <div class="menu-item" style="background:var(--dark3)"><div class="menu-item-header"><h3>Beef Tenderloin</h3><span class="menu-item-price">R220 pp</span></div><p>Centre-cut beef tenderloin, cooked to order, with dauphinoise potato, grilled asparagus, and a red wine and bone marrow sauce.</p><div class="menu-item-tags"><span class="tag tag-gf">GF</span><span class="tag tag-chef">Chef's Pick</span></div></div>
+      <div class="menu-item" style="background:var(--dark3)"><div class="menu-item-header"><h3>Bobotie Terrine</h3><span class="menu-item-price">R110 pp</span></div><p>A contemporary take on the South African classic — spiced minced beef set in a terrine, served with turmeric rice and apricot chutney.</p><div class="menu-item-tags"><span class="tag tag-h">H</span></div></div>
+    </div>
+  </div>
+
+  <!-- SIDES -->
+  <div class="menu-category" id="sides" style="margin-top:4rem">
+    <div class="menu-category-header">
+      <span class="menu-category-icon">🥕</span>
+      <div><h2>Sides & Accompaniments</h2><p>Thoughtfully paired sides that complete the plate</p></div>
+    </div>
+    <div class="menu-items">
+      <div class="menu-item"><div class="menu-item-header"><h3>Roasted Heritage Carrots</h3><span class="menu-item-price">R35 pp</span></div><p>Honey-glazed heritage carrots with caraway seeds, labneh, and fresh dill. Simple, stunning, seasonal.</p><div class="menu-item-tags"><span class="tag tag-v">V</span><span class="tag tag-gf">GF</span></div></div>
+      <div class="menu-item"><div class="menu-item-header"><h3>Gratin Dauphinoise</h3><span class="menu-item-price">R40 pp</span></div><p>Classic creamy potato gratin with Gruyère and a whisper of garlic and nutmeg. The ultimate comfort side.</p><div class="menu-item-tags"><span class="tag tag-v">V</span><span class="tag tag-gf">GF</span></div></div>
+      <div class="menu-item"><div class="menu-item-header"><h3>Spiced Couscous Salad</h3><span class="menu-item-price">R30 pp</span></div><p>Pearl couscous tossed with roasted peppers, preserved lemon, olives, and a cumin-coriander dressing.</p><div class="menu-item-tags"><span class="tag tag-v">V</span><span class="tag tag-h">H</span></div></div>
+      <div class="menu-item"><div class="menu-item-header"><h3>Charred Tenderstem Broccoli</h3><span class="menu-item-price">R32 pp</span></div><p>Broccoli florets charred over an open flame with chilli, garlic, toasted almonds, and a squeeze of lemon.</p><div class="menu-item-tags"><span class="tag tag-v">V</span><span class="tag tag-gf">GF</span></div></div>
+    </div>
+  </div>
+
+  <!-- DESSERTS -->
+  <div class="menu-category" id="desserts" style="background:var(--dark2);padding:3rem;border-radius:4px;margin:-1rem;margin-top:1rem">
+    <div class="menu-category-header">
+      <span class="menu-category-icon">🍮</span>
+      <div><h2>Desserts</h2><p>A sweet finale to every unforgettable meal</p></div>
+    </div>
+    <div class="menu-items">
+      <div class="menu-item" style="background:var(--dark3)"><div class="menu-item-header"><h3>Malva Pudding</h3><span class="menu-item-price">R65 pp</span></div><p>The South African classic — warm, sticky malva pudding with a generous pour of custard and a scoop of vanilla bean ice cream.</p><div class="menu-item-tags"><span class="tag tag-v">V</span><span class="tag tag-chef">Chef's Pick</span></div></div>
+      <div class="menu-item" style="background:var(--dark3)"><div class="menu-item-header"><h3>Dark Chocolate Fondant</h3><span class="menu-item-price">R75 pp</span></div><p>Warm Belgian chocolate fondant with a molten centre, served with salted caramel sauce and pistachio crumb.</p><div class="menu-item-tags"><span class="tag tag-v">V</span><span class="tag tag-chef">Chef's Pick</span></div></div>
+      <div class="menu-item" style="background:var(--dark3)"><div class="menu-item-header"><h3>Panna Cotta</h3><span class="menu-item-price">R55 pp</span></div><p>Vanilla panna cotta with a passionfruit coulis, fresh mango, and a sprinkle of toasted coconut. Light, elegant, tropical.</p><div class="menu-item-tags"><span class="tag tag-v">V</span><span class="tag tag-gf">GF</span></div></div>
+      <div class="menu-item" style="background:var(--dark3)"><div class="menu-item-header"><h3>Cheese Board</h3><span class="menu-item-price">R80 pp</span></div><p>A selection of local and imported cheeses with artisan crackers, honeycomb, fresh grapes, and fig preserve.</p><div class="menu-item-tags"><span class="tag tag-v">V</span><span class="tag tag-gf">GF</span></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <h2>Want a custom menu?</h2>
+  <p>We'll design a bespoke menu tailored to your event, season, and dietary needs. Let's talk.</p>
+  <a href="contact.html" class="btn-primary">Request a Menu Consultation</a>
+  <a href="pricing.html" class="btn-outline">View Pricing</a>
+</div>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:.75rem"><svg width="28" height="28" viewBox="0 0 36 36" fill="none"><path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/><rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/></svg><span class="footer-copy">© 2026 Chef's Table Catering. All rights reserved.</span></div>
+  <div class="footer-links"><a href="index.html">Home</a><a href="menus.html">Menus</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div>
+</footer>
+<script>
+// Theme & Nav Logic
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  });
+}
+const hamburger = document.querySelector('.hamburger');
+const navUl = document.querySelector('nav ul');
+if (hamburger && navUl) { hamburger.addEventListener('click', () => navUl.classList.toggle('active')); }
+</script>
+</body>
+</html>

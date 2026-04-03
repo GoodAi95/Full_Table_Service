@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing | Chef's Table Catering</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+<script>
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/><rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/></svg>
+    <span class="logo-text">Chef's<span>Table</span></span>
+  </a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="menus.html">Menus</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="pricing.html" class="active">Pricing</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="nav-controls">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌓</button>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <p class="page-hero-eyebrow">Transparent Pricing</p>
+  <h1>Great catering,<br><em>no hidden</em><br>surprises.</h1>
+  <p>All prices are per person and inclusive of professional service staff, crockery, and full cleanup. Deposits of 30–50% required to secure your date.</p>
+</div>
+
+<div class="section">
+  <p class="section-eyebrow">Packages</p>
+  <h2 class="section-title">Choose your package.</h2>
+  <div class="toggle-wrap">
+    <span class="toggle-label">Per Person</span>
+    <label class="toggle"><input type="checkbox" id="toggle"><span class="slider"></span></label>
+    <span class="toggle-label">Full Event</span>
+    <span class="discount-badge">Save up to 15%</span>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <p class="pricing-tier">Starter</p>
+      <h3 class="pricing-name">Essential</h3>
+      <p class="pricing-desc">Perfect for smaller private functions and corporate lunches where simplicity and reliability are key.</p>
+      <div class="pricing-price" id="p1">R150</div>
+      <p class="pricing-per">per person · minimum 30 guests</p>
+      <ul class="pricing-features">
+        <li>2-course plated menu</li>
+        <li>Basic crockery & cutlery</li>
+        <li>Professional service staff (1:20)</li>
+        <li>Full setup & cleanup</li>
+        <li>1 dietary option accommodated</li>
+        <li class="no">Event coordinator</li>
+        <li class="no">Premium tableware</li>
+        <li class="no">Welcome drinks</li>
+      </ul>
+      <a href="contact.html" class="btn-card">Get Started</a>
+    </div>
+    <div class="pricing-card featured">
+      <span class="pricing-badge">Most Popular</span>
+      <p class="pricing-tier">Premium</p>
+      <h3 class="pricing-name">Signature</h3>
+      <p class="pricing-desc">Our most popular package — elevated service, premium presentation, and everything you need for a seamless event.</p>
+      <div class="pricing-price" id="p2">R280</div>
+      <p class="pricing-per">per person · minimum 20 guests</p>
+      <ul class="pricing-features">
+        <li>3-course plated menu</li>
+        <li>Premium tableware & linen</li>
+        <li>Dedicated event coordinator</li>
+        <li>Candle & floral centrepieces</li>
+        <li>3 dietary options accommodated</li>
+        <li>Welcome cocktail or mocktail</li>
+        <li>Full setup & cleanup</li>
+        <li class="no">Custom menu tasting</li>
+      </ul>
+      <a href="contact.html" class="btn-card">Book Signature</a>
+    </div>
+    <div class="pricing-card">
+      <p class="pricing-tier">Luxury</p>
+      <h3 class="pricing-name">Prestige</h3>
+      <p class="pricing-desc">For events where only the extraordinary will do. Fully bespoke, fully managed, and utterly unforgettable.</p>
+      <div class="pricing-price" id="p3">Custom</div>
+      <p class="pricing-per">bespoke pricing · any guest count</p>
+      <ul class="pricing-features">
+        <li>Fully custom menu design</li>
+        <li>Private chef's tasting session</li>
+        <li>Luxury linen & designer decor</li>
+        <li>Full bar & mixologist service</li>
+        <li>All dietary needs met</li>
+        <li>Dedicated event manager</li>
+        <li>Post-event deep clean</li>
+        <li>White-glove service standard</li>
+      </ul>
+      <a href="contact.html" class="btn-card">Enquire Now</a>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="background:var(--dark2)">
+  <p class="section-eyebrow">Add-On Services</p>
+  <h2 class="section-title">Customise your package.</h2>
+  <p style="color:var(--muted);max-width:560px;line-height:1.8">Enhance any package with our optional add-ons. All add-ons are confirmed at the time of booking and priced per event unless stated otherwise.</p>
+  <div class="addons-grid">
+    <div class="addon-card"><div class="addon-icon">🍷</div><h3>Bar Service</h3><p>Full bar setup with a licensed bartender. Includes mixers, glassware, and soft drink alternatives.</p><span class="addon-price">From R45 pp</span></div>
+    <div class="addon-card"><div class="addon-icon">🎤</div><h3>Event Coordination</h3><p>A dedicated coordinator for venue setup, timing management, and vendor liaison throughout your event.</p><span class="addon-price">From R3,500</span></div>
+    <div class="addon-card"><div class="addon-icon">💐</div><h3>Floral & Décor</h3><p>Fresh centrepieces, table runners, and ambient décor elements. Designed to complement your theme.</p><span class="addon-price">From R1,800</span></div>
+    <div class="addon-card"><div class="addon-icon">🎂</div><h3>Dessert Station</h3><p>An interactive dessert table featuring five to eight mini dessert options with a dedicated attendant.</p><span class="addon-price">From R85 pp</span></div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="section-eyebrow">Compare Plans</p>
+  <h2 class="section-title">What's included — at a glance.</h2>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Essential</th>
+        <th style="color:var(--green)">Signature ✦</th>
+        <th>Prestige</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Courses</td><td>2-course</td><td class="highlight-col">3-course</td><td>Custom</td></tr>
+      <tr><td>Minimum Guests</td><td>30</td><td class="highlight-col">20</td><td>Any</td></tr>
+      <tr><td>Service Staff</td><td>1:20 ratio</td><td class="highlight-col">1:15 ratio</td><td>1:10 ratio</td></tr>
+      <tr><td>Tableware</td><td>Standard</td><td class="highlight-col">Premium</td><td>Designer</td></tr>
+      <tr><td>Linen</td><td class="cross">—</td><td class="highlight-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+      <tr><td>Event Coordinator</td><td class="cross">—</td><td class="highlight-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+      <tr><td>Welcome Drinks</td><td class="cross">—</td><td class="highlight-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+      <tr><td>Floral Centrepieces</td><td class="cross">—</td><td class="highlight-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+      <tr><td>Menu Tasting</td><td class="cross">—</td><td class="highlight-col cross">—</td><td><span class="check">✓</span></td></tr>
+      <tr><td>Bar & Mixologist</td><td class="cross">Add-on</td><td class="highlight-col">Add-on</td><td><span class="check">✓</span></td></tr>
+      <tr><td>Dietary Options</td><td>1</td><td class="highlight-col">3</td><td>Unlimited</td></tr>
+      <tr><td>Setup & Cleanup</td><td><span class="check">✓</span></td><td class="highlight-col"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="cta-banner">
+  <h2>Not sure which package is right for you?</h2>
+  <p>Send us the details and we'll recommend the best fit — with a personalised quote within 48 hours.</p>
+  <a href="contact.html" class="btn-primary">Request a Quote</a>
+  <a href="faq.html" class="btn-outline">Read the FAQ</a>
+</div>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:.75rem"><svg width="28" height="28" viewBox="0 0 36 36" fill="none"><path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/><rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/></svg><span class="footer-copy">© 2026 Chef's Table Catering. All rights reserved.</span></div>
+  <div class="footer-links"><a href="index.html">Home</a><a href="menus.html">Menus</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div>
+</footer>
+<script>
+// Theme & Nav Logic
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  });
+}
+const hamburger = document.querySelector('.hamburger');
+const navUl = document.querySelector('nav ul');
+if (hamburger && navUl) { hamburger.addEventListener('click', () => navUl.classList.toggle('active')); }
+
+document.getElementById('toggle').addEventListener('change', function(){
+  const on = this.checked;
+  // Illustrative full-event pricing (base × guests with discount)
+  document.getElementById('p1').textContent = on ? 'R13,500' : 'R150';
+  document.getElementById('p2').textContent = on ? 'R22,000' : 'R280';
+  document.getElementById('p3').textContent = 'Custom';
+  document.querySelectorAll('.pricing-per')[0].textContent = on ? 'full event · up to 100 guests' : 'per person · minimum 30 guests';
+  document.querySelectorAll('.pricing-per')[1].textContent = on ? 'full event · up to 80 guests' : 'per person · minimum 20 guests';
+});
+</script>
+</body>
+</html>

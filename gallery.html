@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Chef's Table Catering</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+<script>
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/><rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/></svg>
+    <span class="logo-text">Chef's<span>Table</span></span>
+  </a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="menus.html">Menus</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="nav-controls">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌓</button>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <p class="page-hero-eyebrow">Our Work</p>
+  <h1>Every plate<br>tells a <em>story.</em></h1>
+  <p>A visual taste of the events we've had the privilege of serving. From intimate dinner parties to grand wedding receptions — each photo captures a moment of care.</p>
+</div>
+
+<div class="gallery-controls">
+  <button class="filter-btn active" onclick="filterGallery('all',this)">All</button>
+  <button class="filter-btn" onclick="filterGallery('food',this)">Food & Plating</button>
+  <button class="filter-btn" onclick="filterGallery('events',this)">Events</button>
+  <button class="filter-btn" onclick="filterGallery('weddings',this)">Weddings</button>
+  <button class="filter-btn" onclick="filterGallery('setup',this)">Table Setup</button>
+</div>
+
+<div class="gallery-section">
+  <div class="masonry" id="gallery">
+    <div class="gallery-item" data-cat="food" data-title="Beef Tenderloin" data-desc="Pan-seared beef tenderloin with dauphinoise potato and seasonal vegetables, plated for a 120-guest corporate dinner." data-tag="Corporate Event" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">🥩</span><span class="caption">Beef Tenderloin</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Beef Tenderloin</p></div>
+    </div>
+    <div class="gallery-item tall" data-cat="weddings" data-title="Wedding Ceremony Setup" data-desc="Outdoor reception setup for 200 guests at a private estate in the Cradle of Humankind — full linen, floral centerpieces, and custom menu cards." data-tag="Wedding" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">💒</span><span class="caption">Wedding Setup</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Wedding Ceremony</p></div>
+    </div>
+    <div class="gallery-item" data-cat="food" data-title="Canape Selection" data-desc="An assortment of twelve canapes prepared for a 60-guest cocktail reception including bruschetta, prawn skewers, and mushroom tartlets." data-tag="Cocktail Reception" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">🍢</span><span class="caption">Canape Selection</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Canapes</p></div>
+    </div>
+    <div class="gallery-item xtall" data-cat="setup" data-title="Luxury Table Setting" data-desc="A fully dressed dinner table with fine linen, crystal glassware, and custom floral arrangements for a 40-guest private dinner party." data-tag="Dinner Party" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">🕯️</span><span class="caption">Table Setting</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Luxury Setting</p></div>
+    </div>
+    <div class="gallery-item tall" data-cat="food" data-title="Dark Chocolate Fondant" data-desc="Warm Belgian chocolate fondant with salted caramel, pistachio crumb and vanilla ice cream — a signature dessert for over 150 wedding guests." data-tag="Wedding Dessert" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">🍫</span><span class="caption">Chocolate Fondant</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Chocolate Fondant</p></div>
+    </div>
+    <div class="gallery-item" data-cat="events" data-title="Corporate Buffet" data-desc="A live buffet station set up for a 300-guest company year-end function, featuring four cuisine stations and a dessert bar." data-tag="Corporate" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">🍽️</span><span class="caption">Corporate Buffet</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Buffet Station</p></div>
+    </div>
+    <div class="gallery-item" data-cat="food" data-title="Panna Cotta" data-desc="Vanilla panna cotta with passionfruit coulis and fresh mango — a light, elegant plated dessert for summer weddings." data-tag="Dessert" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">🍮</span><span class="caption">Panna Cotta</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Panna Cotta</p></div>
+    </div>
+    <div class="gallery-item tall" data-cat="events" data-title="Garden Party" data-desc="An outdoor garden party catering for 80 guests, featuring live cooking stations, a cocktail bar, and an artisan cheese spread." data-tag="Garden Party" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">🌿</span><span class="caption">Garden Party</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Garden Party</p></div>
+    </div>
+    <div class="gallery-item xtall" data-cat="weddings" data-title="Wedding Cake Cutting" data-desc="The moment captured — a five-tier cake cutting ceremony with our team standing by for the dessert service at a Sandton wedding." data-tag="Wedding" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">🎂</span><span class="caption">Wedding Cake</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Wedding Cake</p></div>
+    </div>
+    <div class="gallery-item" data-cat="setup" data-title="Cocktail Hour Display" data-desc="An elegant cocktail table arrangement with charcuterie boards, artisan bread, and fresh flowers for a pre-dinner reception." data-tag="Cocktail" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">🍾</span><span class="caption">Cocktail Display</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Cocktail Display</p></div>
+    </div>
+    <div class="gallery-item" data-cat="food" data-title="Pan-Seared Kingklip" data-desc="Crispy-skin kingklip fillet on white bean purée with cherry tomatoes and a lemon-caper butter — a Signature package favourite." data-tag="Main Course" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">🐟</span><span class="caption">Kingklip Fillet</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Kingklip</p></div>
+    </div>
+    <div class="gallery-item tall" data-cat="setup" data-title="Outdoor Marquee Setup" data-desc="A 180-person marquee wedding setup with round tables, draped linen, pillar candles and bespoke centrepieces in a private game reserve." data-tag="Wedding" onclick="openLightbox(this)">
+      <div class="gallery-placeholder"><span class="emoji">⛺</span><span class="caption">Marquee Setup</span></div>
+      <div class="gallery-overlay"><span>View</span><p>Marquee</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <div class="lightbox-emoji" id="lb-emoji"></div>
+    <h2 class="lightbox-title" id="lb-title"></h2>
+    <p class="lightbox-desc" id="lb-desc"></p>
+    <span class="lightbox-tag" id="lb-tag"></span>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <h2>Want to see more?</h2>
+  <p>Follow us on social media for weekly event highlights, behind-the-scenes kitchen moments, and new menu reveals.</p>
+  <a href="contact.html" class="btn-primary">Book Your Event</a>
+</div>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:.75rem"><svg width="28" height="28" viewBox="0 0 36 36" fill="none"><path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/><rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/></svg><span class="footer-copy">© 2026 Chef's Table Catering. All rights reserved.</span></div>
+  <div class="footer-links"><a href="index.html">Home</a><a href="menus.html">Menus</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div>
+</footer>
+
+<script>
+// Theme & Nav Logic
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  });
+}
+const hamburger = document.querySelector('.hamburger');
+const navUl = document.querySelector('nav ul');
+if (hamburger && navUl) { hamburger.addEventListener('click', () => navUl.classList.toggle('active')); }
+
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.style.display = (cat === 'all' || item.dataset.cat === cat) ? '' : 'none';
+  });
+}
+function openLightbox(el) {
+  document.getElementById('lb-emoji').textContent = el.querySelector('.emoji').textContent;
+  document.getElementById('lb-title').textContent = el.dataset.title;
+  document.getElementById('lb-desc').textContent = el.dataset.desc;
+  document.getElementById('lb-tag').textContent = el.dataset.tag;
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+document.getElementById('lightbox').addEventListener('click', function(e){
+  if(e.target === this) closeLightbox();
+});
+</script>
+</body>
+</html>

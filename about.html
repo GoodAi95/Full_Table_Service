@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Chef's Table Catering</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+<script>
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+</script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/><rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/></svg>
+    <span class="logo-text">Chef's<span>Table</span></span>
+  </a>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="menus.html">Menus</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="nav-controls">
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌓</button>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <p class="page-hero-eyebrow">Our Story</p>
+  <h1>Passion, precision,<br><em>and a love</em><br>for great food.</h1>
+  <p>We started as a small family kitchen with a big dream — to bring restaurant-quality dining to every celebration, boardroom, and backyard in South Africa.</p>
+</div>
+
+<div class="section" style="background:var(--dark2)">
+  <div class="mission-split">
+    <div>
+      <p class="section-eyebrow">Who We Are</p>
+      <h2 class="section-title">More than caterers — we're storytellers through food.</h2>
+      <p class="section-body">Chef's Table was founded on a simple belief: that every meal is an opportunity to create a memory. Over more than a decade, we've grown from a home kitchen to a full-service catering company with a team of passionate chefs, event coordinators, and hospitality professionals.</p>
+      <br>
+      <p class="section-body">We work across Johannesburg and all provinces, bringing meticulous attention to detail, seasonal menus, and genuine warmth to every event we touch.</p>
+    </div>
+    <div class="mission-visual">
+      <div class="mission-stat"><span class="mission-stat-num">500+</span><span class="mission-stat-label">Events Catered</span></div>
+      <div class="mission-stat"><span class="mission-stat-num">12+</span><span class="mission-stat-label">Years Active</span></div>
+      <div class="mission-stat"><span class="mission-stat-num">98%</span><span class="mission-stat-label">Client Satisfaction</span></div>
+      <div class="mission-stat"><span class="mission-stat-num">6</span><span class="mission-stat-label">Head Chefs</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="section-eyebrow">Our Values</p>
+  <h2 class="section-title">What we stand for.</h2>
+  <div class="values-grid">
+    <div class="value-card"><span class="value-icon">🌿</span><h3>Seasonal Sourcing</h3><p>We build menus around what's fresh, local, and in season — because the best ingredient is always a great one.</p></div>
+    <div class="value-card"><span class="value-icon">🎯</span><h3>Precision</h3><p>Every element of every dish and service is planned and executed with care. Details are not afterthoughts — they're the whole point.</p></div>
+    <div class="value-card"><span class="value-icon">🤝</span><h3>Partnership</h3><p>We treat every client as a collaborator. Your vision drives the menu. We bring the skill to make it extraordinary.</p></div>
+    <div class="value-card"><span class="value-icon">♻️</span><h3>Responsibility</h3><p>We minimise food waste, source responsibly, and operate with environmental consciousness baked into everything we do.</p></div>
+  </div>
+</div>
+
+<div class="section" style="background:var(--dark2)">
+  <p class="section-eyebrow">Our Journey</p>
+  <h2 class="section-title">How we got here.</h2>
+  <div class="timeline">
+    <div class="timeline-item"><p class="timeline-year">2012</p><h3>Founded in Johannesburg</h3><p>Started as a boutique dinner-party service by our founder and head chef, operating out of a home kitchen in Gauteng.</p></div>
+    <div class="timeline-item"><p class="timeline-year">2015</p><h3>First Corporate Contract</h3><p>Secured a recurring corporate catering contract, marking our expansion beyond private events into the business sector.</p></div>
+    <div class="timeline-item"><p class="timeline-year">2018</p><h3>Full-Service Team Assembled</h3><p>Grew to a team of 20+ including dedicated chefs, front-of-house staff, and an in-house event coordinator.</p></div>
+    <div class="timeline-item"><p class="timeline-year">2021</p><h3>National Coverage</h3><p>Expanded service capabilities to cover all nine provinces, partnering with regional suppliers and local talent across the country.</p></div>
+    <div class="timeline-item"><p class="timeline-year">2024</p><h3>500+ Events Milestone</h3><p>Celebrated our 500th event — a milestone that reflects hundreds of families, couples, and companies who trusted us with their most important days.</p></div>
+  </div>
+</div>
+
+<div class="section">
+  <p class="section-eyebrow">Meet the Team</p>
+  <h2 class="section-title">The people behind every plate.</h2>
+  <div class="team-grid">
+    <div class="team-card"><div class="team-avatar">👨‍🍳</div><div class="team-info"><h3>Marcus Dlamini</h3><p class="team-role">Executive Chef & Founder</p><p>With 18 years of culinary experience spanning Johannesburg, London, and Cape Town, Marcus leads all menu development and kitchen operations with a philosophy centred on bold flavour and local ingredients.</p></div></div>
+    <div class="team-card"><div class="team-avatar">👩‍🍳</div><div class="team-info"><h3>Lerato Nkosi</h3><p class="team-role">Head Pastry Chef</p><p>Lerato brings a sweet precision to every event, from wedding cakes to dessert stations. Trained at the International Hotel School, her creations are as beautiful as they are delicious.</p></div></div>
+    <div class="team-card"><div class="team-avatar">🧑‍💼</div><div class="team-info"><h3>Sipho Mokoena</h3><p class="team-role">Events Director</p><p>Sipho coordinates every booking from inquiry to final invoice, ensuring seamless communication and flawless execution. Over 300 events managed across his 8-year tenure with the team.</p></div></div>
+  </div>
+</div>
+
+<div class="cta-banner">
+  <h2>Ready to work with us?</h2>
+  <p>Let's start planning your event together. We'd love to hear your vision.</p>
+  <a href="contact.html" class="btn-primary">Get in Touch</a>
+  <a href="menus.html" class="btn-outline">Explore Menus</a>
+</div>
+
+<footer>
+  <div style="display:flex;align-items:center;gap:.75rem">
+    <svg width="28" height="28" viewBox="0 0 36 36" fill="none"><path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/><rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/></svg>
+    <span class="footer-copy">© 2026 Chef's Table Catering. All rights reserved.</span>
+  </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a><a href="menus.html">Menus</a><a href="pricing.html">Pricing</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a>
+  </div>
+</footer>
+<script>
+// Theme & Nav Logic
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  });
+}
+const hamburger = document.querySelector('.hamburger');
+const navUl = document.querySelector('nav ul');
+if (hamburger && navUl) { hamburger.addEventListener('click', () => navUl.classList.toggle('active')); }
+</script>
+</body>
+</html>
