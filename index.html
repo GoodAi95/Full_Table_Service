@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Full Catering Service | Premium Catering</title>
+<title>Full Table Service | Premium Catering</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/styles.css">
 <script>
@@ -14,17 +14,16 @@
 <body>
   <nav>
     <a href="#home" class="logo">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Chef hat shape in green -->
-        <path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/>
-        <!-- Brim -->
-        <rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/>
-        <!-- Brim highlight -->
-        <rect x="7" y="26" width="22" height="1.5" rx="0.5" fill="rgba(255,255,255,0.2)"/>
-        <!-- Hat highlight -->
-        <ellipse cx="12" cy="13" rx="2.5" ry="2" fill="rgba(255,255,255,0.15)" transform="rotate(-15 12 13)"/>
+      <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="circle-clip-nav">
+            <circle cx="20" cy="20" r="20" />
+          </clipPath>
+        </defs>
+            <circle cx="20" cy="20" r="20" fill="#f4f0e8" />
+        <image href="images/logo.png" width="40" height="40" clip-path="url(#circle-clip-nav)" preserveAspectRatio="xMidYMid slice" />
       </svg>
-      <span class="logo-text">Full Catering <span>Service</span></span>
+      <span class="logo-text">Full Table <span>Service</span></span>
     </a>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
@@ -37,7 +36,17 @@
       <li><a href="contact.html" class="nav-cta">Book Now</a></li>
     </ul>
     <div class="nav-controls">
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme"><img src="icons/dark-mode.png" width=30/></button>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="24" height="24">
+          <rect width="100" height="100" rx="22" fill="#131919"/>
+          <g fill="#18F856">
+            <path d="M 40,30 A 24,24 0 1,0 70,60 A 22,22 0 1,1 40,30 Z"/>        
+            <path d="M 60,28 Q 60,35 67,35 Q 60,35 60,42 Q 60,35 53,35 Q 60,35 60,28 Z" />  
+            <path d="M 72,23 Q 72,28 77,28 Q 72,28 72,33 Q 72,28 67,28 Q 72,28 72,23 Z" />    
+            <path d="M 70,41 Q 70,45 74,45 Q 70,45 70,49 Q 70,45 66,45 Q 70,45 70,41 Z" />
+          </g>
+        </svg>
+      </button>
       <div class="hamburger">
         <span></span><span></span><span></span>
       </div>
@@ -45,17 +54,18 @@
   </nav>
   
   <section id="home">
-  <div class="hero-left">
-    <p class="hero-eyebrow">Premium Catering Services</p>
-    <h1 class="hero-title">
-      Every event,<br>
-      <em>beautifully</em><br>
-      served.
-    </h1>
-    <p class="hero-sub">From intimate dinners to grand celebrations — we bring exceptional food, flawless service, and unforgettable experiences to every table.</p>
-    <div class="hero-buttons">
-      <a href="contact.html" class="btn-primary">Request a Quote</a>
-      <a href="menus.html" class="btn-outline">View Menus</a>
+    <div class="hero-left">
+      <p class="hero-eyebrow">Premium Catering Services</p>
+      <h1 class="hero-title">
+        Every event,<br>
+        <em>beautifully</em><br>
+        served.
+      </h1>
+      <p class="hero-sub">From intimate dinners to grand celebrations — we bring exceptional food, flawless service, and unforgettable experiences to every table.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn-primary">Request a Quote</a>
+        <a href="menus.html" class="btn-outline">View Menus</a>
+      </div>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
@@ -71,34 +81,34 @@
         <span class="stat-label">Client Satisfaction</span>
       </div>
     </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-bg-circle"></div>
-    <svg class="hero-big-hat" width="320" height="320" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M50 8C41.5 8 34 13.3 31 20.9C29.5 20.4 27.9 20.1 26.3 20.1C18.7 20.1 12.5 26.3 12.5 33.9C12.5 39.6 15.9 44.5 20.8 46.8V70H79.2V46.8C84.1 44.5 87.5 39.6 87.5 33.9C87.5 26.3 81.3 20.1 73.7 20.1C72.1 20.1 70.5 20.4 69 20.9C66 13.3 58.5 8 50 8Z" fill="#18F856" opacity="0.9"/>
-      <rect x="20" y="70" width="60" height="12" rx="2" fill="#18F856"/>
-      <rect x="20" y="70" width="60" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
-      <ellipse cx="35" cy="28" rx="7" ry="5.5" fill="rgba(255,255,255,0.1)" transform="rotate(-20 35 28)"/>
-      <!-- Decorative ring around hat -->
-      <circle cx="50" cy="50" r="47" stroke="rgba(24,248,86,0.08)" stroke-width="1" fill="none" stroke-dasharray="4 8"/>
-    </svg>
-  </div>
   </section>
     
   <footer>
     <div style="display:flex;align-items:center;gap:0.75rem;">
-      <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
-        <path d="M18 4C14.5 4 11.5 6.2 10.4 9.3C9.8 9.1 9.1 9 8.5 9C5.5 9 3 11.5 3 14.5C3 16.8 4.4 18.8 6.5 19.6V26H29.5V19.6C31.6 18.8 33 16.8 33 14.5C33 11.5 30.5 9 27.5 9C26.9 9 26.2 9.1 25.6 9.3C24.5 6.2 21.5 4 18 4Z" fill="#18F856"/>
-        <rect x="7" y="26" width="22" height="4" rx="1" fill="#18F856"/>
+      <svg width="56" height="56" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="circle-clip-footer">
+            <circle cx="20" cy="20" r="20" />
+          </clipPath>
+        </defs>
+            <circle cx="20" cy="20" r="20" fill="#f4f0e8" />
+        <image href="images/logo.png" width="40" height="40" clip-path="url(#circle-clip-footer)" preserveAspectRatio="xMidYMid slice" />
       </svg>
-      <span class="footer-copy">© 2026 Full Catering Service. All rights reserved.</span>
+      <span class="footer-copy">© 2026 Full Table Service. All rights reserved.</span>
     </div>
     <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="menus.html">Menus</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="contact.html">Contact</a>
-      <a href="faq.html">FAQ</a>
+      <a href="#" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0 2h10c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3zm5 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm4.5.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+      </a>
+      <a href="#" target="_blank" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 2.5h3v3h-3c-1.66 0-3 1.34-3 3v1.5H8.5V11h2V20h3v-8h2.25l.75-4H13.5V8c0-.28.22-.5.5-.5z"/></svg>
+      </a>
+      <a href="#" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 3A2.5 2.5 0 0 0 4 5.5v13A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5v-13A2.5 2.5 0 0 0 17.5 3h-11zm2 4.5h2.5V18H8.5V7.5zm1.25-3A1.25 1.25 0 1 1 8.5 6.75 1.25 1.25 0 0 1 9.75 4.5zM13 9.5c.83 0 1.5.67 1.5 1.5V18h-2.5V11h-.02c-.3.55-.95.9-1.68.9C9.04 11.9 8 10.98 8 9.68V9.5H10.5V12c0 .28.22.5.5.5s.5-.22.5-.5V9.5H13z"/></svg>
+      </a>
+      <a href="#" target="_blank" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.3 6.3L13.7 10.9 18.3 15.5l-1.4 1.4L12.3 12.3 7.7 16.9 6.3 15.5l4.6-4.6L6.3 6.3 7.7 4.9l4.6 4.6 4.6-4.6z"/></svg>
+      </a>
     </div>
   </footer>
 
@@ -106,10 +116,50 @@
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
+      // Function to update the theme icon
+      const updateThemeIcon = (theme) => {
+        const svgContainer = themeToggle.querySelector('svg');
+        if (svgContainer) {
+          if (theme === 'light') {
+            // Light mode: show dark icon (first SVG)
+            svgContainer.innerHTML = `
+              <rect width="100" height="100" rx="22" fill="#131919"/>
+              <g fill="#18F856">
+                <path d="M 40,30 A 24,24 0 1,0 70,60 A 22,22 0 1,1 40,30 Z"/>        
+                <path d="M 60,28 Q 60,35 67,35 Q 60,35 60,42 Q 60,35 53,35 Q 60,35 60,28 Z" />  
+                <path d="M 72,23 Q 72,28 77,28 Q 72,28 72,33 Q 72,28 67,28 Q 72,28 72,23 Z" />    
+                <path d="M 70,41 Q 70,45 74,45 Q 70,45 70,49 Q 70,45 66,45 Q 70,45 70,41 Z" />
+              </g>
+            `;
+          } else {
+            // Dark mode: show light icon (second SVG)
+            svgContainer.innerHTML = `
+              <rect width="100" height="100" rx="20" fill="#778565"/>
+              <circle cx="50" cy="50" r="16" fill="#18F856"/>
+              <g stroke="#C64422" stroke-width="4" stroke-linecap="round">
+                <line x1="50" y1="15" x2="50" y2="25"/>
+                <line x1="50" y1="75" x2="50" y2="85"/>
+                <line x1="15" y1="50" x2="25" y2="50"/>
+                <line x1="75" y1="50" x2="85" y2="50"/>
+                <line x1="25.25" y1="25.25" x2="32.32" y2="32.32"/>
+                <line x1="67.68" y1="67.68" x2="74.75" y2="74.75"/>
+                <line x1="25.25" y1="74.75" x2="32.32" y2="67.68"/>
+                <line x1="67.68" y1="32.32" x2="74.75" y2="25.25"/>
+              </g>
+            `;
+          }
+        }
+      };
+
+      // Initialize with current theme
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      updateThemeIcon(currentTheme);
+
       themeToggle.addEventListener('click', () => {
         const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
+        updateThemeIcon(theme);
       });
     }
 
