@@ -15,8 +15,8 @@
   --dark:   #f4f0e8;
   --dark2:  #e9e4d9;
   --dark3:  #dfd8ca;
-  --white:  #131919;
-  --muted:  #5a665a;
+  --white:  #f4f0e8;
+  --muted:  rgb(28, 30, 38);
   --green:  #10a83b;
   --nav-bg: rgba(244, 240, 232, 0.92);
   --overlay: rgba(244, 240, 232, 0.8);
@@ -64,6 +64,10 @@ nav {
 
 .logo-text span { color: var(--green); }
 
+[data-theme="light"] .logo-text {
+  color: #212d2d  ;
+}
+
 nav ul {
   list-style: none;
   display: flex; gap: 2.5rem;
@@ -96,13 +100,22 @@ nav ul a.active { color: var(--green); }
 
 /* ──── NAV CONTROLS ──── */
 .nav-controls {
-  display: flex; align-items: center; gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1px;
+  gap: 1rem;
+  width: 5.1rem;
+  height: 40px;
+}
+
+.nav-controls svg{
+  width: 30px;
+  height: 30px;
 }
 
 .theme-toggle {
   background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--white);
   transition: transform 0.3s;
-  align-content: center;
 }
 .theme-toggle:hover { transform: scale(1.1); }
 
@@ -288,11 +301,17 @@ html:not([data-theme="light"]) .theme-toggle img {
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--white);
+}
+
+[data-theme="light"] .stat-label {
+  color: var(--white);
 }
 
 /* ──── SECTIONS COMMON ──── */
-.section { padding: 6rem 4rem; }
+.section {
+  padding: 4rem 2rem;
+}
 
 .section-eyebrow {
   font-size: 0.72rem;
@@ -460,10 +479,10 @@ html:not([data-theme="light"]) .theme-toggle img {
 .menu-card:hover::after { transform: scaleX(1); }
 
 .menu-icon {
-  font-size: 2.5rem; margin-bottom: 1.2rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
   display: inline-block;
   margin-top: 1.5rem;
-  font-size: 0.7rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--green);
@@ -795,7 +814,7 @@ html:not([data-theme="light"]) .theme-toggle img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  margin-top: 3.5rem;
+  margin-top: 2rem;
 }
 
 .faq-item {
@@ -805,6 +824,26 @@ html:not([data-theme="light"]) .theme-toggle img {
   padding: 1.75rem;
   cursor: pointer;
   transition: border-color 0.2s;
+}
+
+.faq-search{
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.faq-tab{
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.faq-input{
+  width: 20rem;
+  height: 1.5rem;
+  border: 1px solid #0fe84a
+}
+
+.faq-category-title{
+  margin: 1rem 1rem 1rem 0;
+  padding: 1px;
+  border-bottom: 3px solid #0fe84a
 }
 
 [data-theme="light"] .faq-item {
@@ -1002,12 +1041,12 @@ footer {
 }
 
 [data-theme="light"] .footer-copy {
-  color: var(--dark);
+  color: var(--muted);
 }
 
 .footer-links {
   display: flex;
-  gap: 0.85rem;
+  gap: 1rem;
 }
 
 .footer-links a {
@@ -1017,25 +1056,8 @@ footer {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.08);
   color: var(--muted);
   text-decoration: none;
-  transition: color 0.2s, background 0.2s, transform 0.2s;
-}
-
-.footer-links a svg {
-  width: 20px;
-  height: 20px;
-}
-
-[data-theme="light"] .footer-links a {
-  color: var(--dark);
-  background: rgba(0,0,0,0.08);
-}
-
-.footer-links a:hover {
-  color: var(--green);
-  transform: translateY(-1px);
 }
 
 /* ──── CONSOLIDATED EXTENSIONS ──── */
@@ -1408,7 +1430,11 @@ footer {
 
 /* ──── MOBILE MENU BTN ──── */
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-.hamburger span { width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+.hamburger span { width: 25px; height: 2px; background: var(--white); transition: all 0.3s; }
+
+[data-theme="light"] .hamburger span{
+  background: #212d2d;
+}
 
 @media (max-width: 900px) {
   nav { padding: 1rem 1.5rem; }
@@ -1464,7 +1490,6 @@ footer {
   .menu-items { grid-template-columns: 1fr; }
   .menu-category-header { flex-direction: column; text-align: center; }
   .menu-item-tags { justify-content: center; }
-  .filter-tabs, .faq-tabs { justify-content: center; }
   .legend { flex-direction: column; gap: 1.5rem; text-align: center; justify-content: center; }
   .legend-items { justify-content: center; }
   
