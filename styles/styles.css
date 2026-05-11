@@ -426,7 +426,6 @@ nav ul a.active {
   border-color: rgba(0, 0, 0, 0.15);
 }
 
-
 .about-card::before {
   content: '';
   position: absolute;
@@ -448,7 +447,6 @@ nav ul a.active {
 [data-theme="light"] .about-card p {
   color: #131919;
 }
-
 
 .about-card-author {
   margin-top: 1.5rem;
@@ -476,7 +474,6 @@ nav ul a.active {
 [data-theme="light"] .value-pill {
   color: rgba(19, 25, 25, 0.75);
 }
-
 
 .value-pill::before {
   content: '';
@@ -514,7 +511,6 @@ nav ul a.active {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-
 .menu-card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.35rem;
@@ -526,7 +522,6 @@ nav ul a.active {
   color: #131919;
 }
 
-
 .menu-card p {
   color: var(--muted);
   font-size: 0.9rem;
@@ -536,7 +531,6 @@ nav ul a.active {
 [data-theme="light"] .menu-card p {
   color: rgba(19, 25, 25, 0.75);
 }
-
 
 .menu-card::after {
   content: '';
@@ -762,7 +756,6 @@ nav ul a.active {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
-
 .pricing-card:hover {
   transform: translateY(-4px);
 }
@@ -775,7 +768,6 @@ nav ul a.active {
 [data-theme="light"] .pricing-card.featured {
   background: linear-gradient(135deg, rgba(24, 248, 86, 0.08) 0%, rgba(255, 255, 255, 0.95) 60%);
 }
-
 
 .pricing-tier {
   font-size: 0.75rem;
@@ -795,7 +787,6 @@ nav ul a.active {
 [data-theme="light"] .pricing-name {
   color: #131919;
 }
-
 
 .pricing-badge {
   position: absolute;
@@ -831,7 +822,6 @@ nav ul a.active {
   color: rgba(19, 25, 25, 0.75);
 }
 
-
 .pricing-features {
   list-style: none;
   margin-bottom: 2rem;
@@ -851,7 +841,6 @@ nav ul a.active {
   color: rgba(19, 25, 25, 0.75);
   border-bottom-color: rgba(0, 0, 0, 0.08);
 }
-
 
 .pricing-features li::before {
   content: '✓';
@@ -2954,4 +2943,25 @@ footer {
     gap: 3rem;
     text-align: center;
   }
+}
+
+/* ──── UTILITY CLASSES ──── */
+.bg-dark-2 { background: var(--dark2); }
+.bg-dark-3 { background: var(--dark3); }
+.text-muted { color: var(--muted); }
+.text-sm { font-size: 0.8rem; }
+.max-w-560 { max-width: 560px; }
+.lh-18 { line-height: 1.8; }
+.mt-1 { margin-top: 1rem; }
+.mt-4 { margin-top: 4rem; }
+
+.menu-highlight-card {
+  background: var(--dark2);
+  padding: 3rem;
+  border-radius: 4px;
+  margin: -1rem;
+}
+
+[data-theme="light"] .menu-highlight-card {
+  background: rgba(255, 255, 255, 0.95);
 }
