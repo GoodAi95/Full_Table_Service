@@ -49,9 +49,53 @@ const initThemeNav = () => {
 
   const hamburger = document.querySelector('.hamburger');
   const navUl = document.querySelector('nav ul');
-  if (hamburger && navUl) {
-    hamburger.addEventListener('click', () => navUl.classList.toggle('active'));
+
+  // Create and inject the mobile nav overlay
+  let overlay = document.querySelector('.nav-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
   }
+
+  const openNav = () => {
+    navUl.classList.add('active');
+    hamburger.classList.add('active');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeNav = () => {
+    navUl.classList.remove('active');
+    hamburger.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  };
+
+  if (hamburger && navUl) {
+    hamburger.addEventListener('click', () => {
+      if (navUl.classList.contains('active')) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+  }
+
+  // Close menu when overlay is clicked
+  overlay.addEventListener('click', closeNav);
+
+  // Close menu when a nav link is clicked
+  if (navUl) {
+    navUl.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeNav);
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeNav();
+  });
 };
 
 if (document.readyState === 'loading') {

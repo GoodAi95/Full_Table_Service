@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAQ | Full Table Service</title>
-<link href="https://fonts.googleapis.com/css2?family=PlayfairDisplay:ital,wght@0,400;0,700;0,900;1,400&family=DMSans:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="Frequently asked questions about booking, payment, menus, logistics and events at Full Table Service.">
+<meta name="theme-color" content="#131919">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/styles.css">
 <script src="scripts/theme-nav.js" defer></script>
 </head>
@@ -154,10 +156,6 @@
   </div>
 </footer>
 <script>
-const hamburger = document.querySelector('.hamburger');
-const navUl = document.querySelector('nav ul');
-if (hamburger && navUl) { hamburger.addEventListener('click', () => navUl.classList.toggle('active')); }
-
 document.querySelectorAll('.faq-item').forEach(item => {
   item.querySelector('.faq-q').addEventListener('click', () => {
     const open = item.classList.contains('open');

@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery | Full Table Service</title>
+<meta name="description" content="Browse our gallery of beautifully presented dishes, table settings, and events from Full Table Service.">
+<meta name="theme-color" content="#131919">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/styles.css">
 <script src="scripts/theme-nav.js" defer></script>
@@ -170,23 +172,24 @@
 
   <script src="styles/animations.js"></script>
   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const navUl = document.querySelector('nav ul');
-    if (hamburger && navUl) {
-      hamburger.addEventListener('click', () => { navUl.classList.toggle('active'); });
-    }
-
     // Lightbox Functionality
     function openLightbox(src, title) {
       document.getElementById('lightbox-img').src = src;
       document.getElementById('lightbox-title').textContent = title;
       document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
     }
 
     function closeLightbox(event) {
       if (event) event.stopPropagation();
       document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
     }
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
   </script>
 </body>
 </html>
