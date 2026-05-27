@@ -8,7 +8,8 @@
 <meta name="theme-color" content="#131919">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles/styles.css">
-<script src="scripts/theme-nav.js" defer></script>
+<script type="module" src="/scripts/theme-nav.js"></script>
+<link rel="icon" type="image/png" href="./images/logo-tab.png" />
 </head>
 <body>
   <nav>
@@ -53,20 +54,20 @@
   </nav>
   
   <section id="home">
-    <div class="hero-left">
+    <div class="hero-left" data-aos="fade-right">
       <p class="hero-eyebrow">Premium Catering Services</p>
-      <h1 class="hero-title">
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
         Every event,<br>
         <em>beautifully</em><br>
         served.
       </h1>
-      <p class="hero-sub">From intimate dinners to grand celebrations — we bring exceptional food, flawless service, and unforgettable experiences to every table.</p>
-      <div class="hero-buttons">
+      <p class="hero-sub" data-aos="fade-up" data-aos-delay="200">From intimate dinners to grand celebrations — we bring exceptional food, flawless service, and unforgettable experiences to every table.</p>
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
         <a href="contact.html" class="btn-primary">Request a Quote</a>
         <a href="menus.html" class="btn-outline">View Menus</a>
       </div>
     </div>
-    <div class="hero-stats">
+    <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
       <div class="stat-item">
         <span class="stat-num">500+</span>
         <span class="stat-label">EVENTS CATERED</span>
@@ -109,3 +110,4 @@
   </footer>
 </body>
 </html>
+

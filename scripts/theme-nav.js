@@ -1,6 +1,15 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 // Set initial theme immediately to avoid a flash of the wrong theme
 const savedTheme = localStorage.getItem('theme') || 'dark';
 document.documentElement.setAttribute('data-theme', savedTheme);
+
+AOS.init({
+  duration: 800,
+  once: true,
+  offset: 100,
+});
 
 const updateThemeIcon = (theme) => {
   const themeToggle = document.getElementById('theme-toggle');

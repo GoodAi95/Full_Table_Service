@@ -1,0 +1,1 @@
+import"./theme-nav-CDPBJm89.js";document.addEventListener(`DOMContentLoaded`,()=>{let e=new IntersectionObserver(t=>{t.forEach(t=>{t.isIntersecting&&(t.target.classList.add(`is-visible`),e.unobserve(t.target))})},{threshold:.1,rootMargin:`0px 0px -50px 0px`});document.querySelectorAll(`.animate-on-scroll`).forEach(t=>e.observe(t))});
